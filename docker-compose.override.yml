@@ -1,5 +1,8 @@
 version: '3.7'
 services:
+    db:
+        volumes:
+            - './docker/mysql/my.cnf:/etc/mysql/my.cnf:ro'
     php:
         volumes:
             - './app/:/usr/src/app'
