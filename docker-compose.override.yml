@@ -6,6 +6,8 @@ services:
     php:
         volumes:
             - './app/:/usr/src/app'
+            - './docker/php/php.ini-development:/usr/local/etc/php/php.ini-development:ro'
+            - './docker/php/php.ini-production:/usr/local/etc/php/php.ini-production:ro'
     nginx:
         volumes:
             - './app/public/:/usr/src/app'
